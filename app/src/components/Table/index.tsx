@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './Table.module.scss';
 import { Row } from './Row';
 import { useAppDispatch, useAppSelector } from '../../hooks';
