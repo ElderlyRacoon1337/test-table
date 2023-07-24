@@ -1,0 +1,33 @@
+.root {
+  background-color: #5a5c66;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 631px;
+  padding: 15px 25px;
+  margin-bottom: 15px;
+
+  svg {
+    margin-left: 15px;
+  }
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  flex: 1;
+}
+
+.input::placeholder {
+  color: #b2b7bf;
+}
+
+@media (max-width: 700px) {
+  .root {
+    width: 100%;
+  }
+}

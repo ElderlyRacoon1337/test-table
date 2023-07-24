@@ -1,8 +1,19 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1077px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding-top: 23px;
 }
