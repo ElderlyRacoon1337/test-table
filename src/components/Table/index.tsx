@@ -21,9 +21,9 @@ export const Table = () => {
   }
 
   useEffect(() => {
-    dispatch(getData());
+    dispatch(getData({ searchValue }));
     dispatch(getPage({ currentPage, perPage, sortBy, searchValue }));
-  }, [currentPage, sortBy, searchValue]);
+  }, [currentPage, sortBy, searchValue, totalCount]);
 
   const onClickNext = () => {
     dispatch(setCurrentPage(currentPage + 1));

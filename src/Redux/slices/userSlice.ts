@@ -8,12 +8,20 @@ export type UserParams = {
   searchValue: string;
 };
 
-export const getData = createAsyncThunk<User[]>('user', async () => {
-  const { data } = await axios.get(
-    `https://jsonplaceholder.typicode.com/posts`
-  );
-  return data;
-});
+export type GetDataParams = {
+  searchValue: string;
+};
+
+export const getData = createAsyncThunk<User[], GetDataParams>(
+  'user',
+  async (params) => {
+    const { searchValue } = params;
+    const { data } = await axios.get(
+      `https://jsonplaceholder.typicode.com/posts?q=${searchValue}`
+    );
+    return data;
+  }
+);
 
 export const getPage = createAsyncThunk<User[], UserParams>(
   'user/getPage',
